@@ -1,0 +1,68 @@
+input: Nexedi@erp5/product/ERP5/bootstrap/erp5_core/SkinTemplateItem/portal_skins/erp5_core/CategoryTool_importCategoryFile.py 
+output: category_type, line  96
+
+#38
+new_category_counter += 1
+category_value = container.newContent(portal_type=category_type, id=
+    category_id, effective_date=effective_date)
+report(level='created', field_type='Creation', field_category=
+    category_value.getRelativeUrl(), message='Created new ${type}', mapping
+    ={'type': category_type})
+is_new_category = True
+
+#35
+if category_id in category_type_property_id_set:
+
+#33
+try:
+
+#31
+container_path, category_id = category_path.rsplit('/', 1)
+
+#29
+is_new_category = False
+category_path = category.pop('path')
+category.pop('id', None)
+try:
+
+#28
+for category in category_list:
+
+#26
+total_category_counter += len(category_list)
+category_path_set = set()
+
+#24
+for base_category, category_list in category_list_spreadsheet_dict.iteritems():
+
+#1
+from Products.ERP5Type.Message import translateString
+from Products.ERP5Type.Document import newTempBase
+detailed_report |= simulation_mode
+portal = context.getPortalObject()
+REQUEST = portal.REQUEST
+base_category_property_id_set = portal.portal_types['Base Category'
+    ].getInstancePropertySet()
+category_property_id_set = portal.portal_types.Category.getInstancePropertySet(
+    )
+portal_categories = portal.portal_categories
+resolveCategory = portal_categories.resolveCategory
+getRelatedValueList = portal_categories.getRelatedValueList
+isTransitionPossible = portal.portal_workflow.isTransitionPossible
+detailed_report_result = []
+detailed_report_append = detailed_report_result.append
+def report(field_type, message, mapping=None, field_category='', level=None):...
+new_category_counter = 0
+updated_category_counter = 0
+total_category_counter = 0
+invalid_category_id_counter = 0
+deleted_category_counter = 0
+kept_category_counter = 0
+expired_category_counter = 0
+def hasRelation(obj):...
+def invalid_category_spreadsheet_handler(message):...
+category_list_spreadsheet_dict = context.Base_getCategoriesSpreadSheetMapping(
+    import_file, invalid_spreadsheet_error_handler=
+    invalid_category_spreadsheet_handler)
+if detailed_report_result:
+

@@ -1,0 +1,1 @@
+{"repo_name": "pycodestyle", "error_file": {"../lib-type/scalpel/pre-study/pycodestyle/2.7.0/tmp/pycodestyle.py": [{"name": "__file__", "scope": "mod", "type": "unresolved", "path_id": [], "path_src": []}, {"name": "TextIOWrapper", "scope": "mod.stdin_get_value", "type": "foreign", "path_id": [], "path_src": []}]}}

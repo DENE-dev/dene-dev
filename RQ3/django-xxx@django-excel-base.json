@@ -1,0 +1,1 @@
+{"repo_name": "django-xxx@django-excel-base", "error_file": {"go-xxx@django-excel-base/setup.py": [], "go-xxx@django-excel-base/django_excel_base/excel.py": [], "go-xxx@django-excel-base/django_excel_base/compat.py": [{"name": "long", "scope": "mod", "type": "unresolved", "path_id": [], "path_src": []}]}}

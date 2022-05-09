@@ -1,0 +1,47 @@
+input: Nexedi@erp5/product/ERP5/bootstrap/erp5_core/SkinTemplateItem/portal_skins/erp5_core/Base_jumpToRelatedObject.py 
+output: selection_name mod line 133
+
+#52
+query_params['selection_name'] = selection_name
+query_params['selection_index'] = selection_index
+
+#21
+query_params = dict(portal_status_message=message)
+if selection_name and not relation_found:
+
+#20
+message = Base_translateString('No %s Related' % portal_type[0], default=
+    Base_translateString('No ${portal_type} related.', mapping={
+    'portal_type': Base_translateString(portal_type[0])}))
+
+#11
+related_list = search_method(portal_type=portal_type)
+relation_found = 0
+if len(related_list) == 0:
+
+#12
+search_method = getattr(relation, 'get%sList' % getter_base_name)
+
+#9
+if related:
+
+#7
+getter_base_name = ''.join(_hidden_res_14_28)
+if same_type(portal_type, ''):
+
+#5
+for x in base_category.split('_'):
+
+#3
+_hidden_res_14_28 = []
+
+#4
+relation = portal.restrictedTraverse(jump_from_relative_url)
+
+#1
+portal = context.getPortalObject()
+Base_translateString = portal.Base_translateString
+checkPerm = portal.portal_membership.checkPermission
+redirect_context = context
+if jump_from_relative_url is None:
+

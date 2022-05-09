@@ -1,0 +1,1 @@
+{"repo_name": "grandchild@flatcrawler", "error_file": {"grandchild@flatcrawler/sendmail.py": [], "grandchild@flatcrawler/crawler.py": [{"name": "__file__", "scope": "mod.service_file", "type": "unresolved", "path_id": [], "path_src": []}, {"name": "__file__", "scope": "mod.service_file", "type": "unresolved", "path_id": [], "path_src": []}]}}

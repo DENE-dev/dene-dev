@@ -1,0 +1,51 @@
+input： mitwelten@mitwelten-geo-backend/ogr2pg2gs.py
+output: line 155  gsconfig_url mod
+
+#33
+log.info('Connecting to PostgreSQL')
+conn = psycopg2.connect(pyscopg2_connection_string)
+conn.autocommit = True
+cur = conn.cursor()
+log.info('Connecting to GeoServer')
+cat = Catalog(gsconfig_url, gsconfig_username, gsconfig_password)
+if args.droptable:
+
+#32
+log.error('Missing default credentials')
+log.error(str(e))
+
+#30
+try:
+
+#27
+args = construct_parser().parse_args()
+_hidden_res_130_30 = str(args.path)
+in_path = os.path.abspath(_hidden_res_130_30)
+table_name = args.name
+if args.version:
+
+#1
+import logging
+import sys
+import argparse
+import pathlib
+import os
+import psycopg2
+import tempfile
+from lib import ogr2ogr
+from geoserver.catalog import Catalog
+log = logging.getLogger('ogr2ps2gs')
+log.setLevel(logging.DEBUG)
+handler = logging.StreamHandler(sys.stdout)
+handler.setLevel(logging.DEBUG)
+formatter = logging.Formatter(
+    '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+handler.setFormatter(formatter)
+log.addHandler(handler)
+def existTable(cur, table_name):...
+def dropTable(cur, table_name):...
+def insertVector(cur, in_path, table_name):...
+def publishVector(cur, table_name, postgis_connection_string, cat):...
+def construct_parser():...
+if __name__ == '__main__':
+

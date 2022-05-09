@@ -1,0 +1,32 @@
+input: denavva@cpythonhelp/Lib/ctypes/util.py 
+output: find_library line 328
+--------------------
+
+#3
+def test():...
+if __name__ == '__main__':
+
+#10
+if os.name == 'posix':
+
+#7
+if sys.platform.startswith('aix'):
+
+#4
+if os.name == 'posix' and sys.platform == 'darwin':
+
+#1
+import os
+import shutil
+import subprocess
+import sys
+if os.name == 'nt':
+#219
+print(cdll.msvcrt)
+print(cdll.load('msvcrt'))
+print(find_library('msvcrt'))
+
+#218
+from ctypes import cdll
+if os.name == 'nt':
+

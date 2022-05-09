@@ -1,0 +1,335 @@
+--------------------
+input: waa@bacula/baculabackupreport.py
+output: query_str, line  786
+
+
+#368
+cur.execute(query_str)
+alljobrows = cur.fetchall()
+
+#369
+if dbtype in ('mysql', 'maria'):
+
+#364
+db_connect()
+if dbtype == 'pgsql':
+
+#362
+try:
+
+#363
+smtppass = args['--smtppass']
+
+#359
+if args['--smtppass'] == None:
+
+#360
+smtpuser = args['--smtpuser']
+
+#356
+if args['--smtpuser'] == None:
+
+#357
+jobname = args['--jobname']
+
+#353
+if not args['--jobname']:
+
+#354
+client = args['--client']
+
+#350
+if not args['--client']:
+
+#351
+dbpass = args['--dbpass']
+
+#347
+if args['--dbpass'] == None:
+
+#348
+smtpserver = args['--smtpserver']
+
+#344
+if not args['--smtpserver']:
+
+#345
+dbuser = args['--dbuser']
+
+#341
+if not args['--dbuser']:
+
+#342
+dbhost = args['--dbhost']
+
+#338
+if not args['--dbhost']:
+
+#339
+dbname = args['--dbname']
+
+#335
+if not args['--dbname']:
+
+#336
+dbport = args['--dbport']
+
+#330
+if not args['--dbport'].isnumeric():
+
+#329
+import psycopg2
+import psycopg2.extras
+
+#327
+dbtype = args['--dbtype']
+if dbtype == 'pgsql':
+
+#328
+server = args['--server']
+
+#324
+if not args['--server']:
+
+#325
+smtpport = args['--smtpport']
+
+#321
+if not args['--smtpport'].isnumeric():
+
+#322
+days = args['--days']
+
+#318
+if not args['--days'].isnumeric():
+
+#319
+time = args['--time']
+
+#312
+if not args['--time'].isnumeric():
+
+#311
+fromemail = email
+
+#309
+if args['--fromemail'] == None:
+
+#310
+email = args['--email']
+
+#307
+if args['--email'] is None or '@' not in args['--email']:
+
+#305
+jobtypeset = set(args['--jobtype'])
+if not jobtypeset.issubset(set(all_jobtype_lst)):
+
+#303
+if emailsummary not in valid_email_summary_lst:
+
+#295
+for ced_tup in [('--time', 'TIME'), ('--days', 'DAYS'), ('--email', 'EMAIL'
+
+#294
+args['--dbport'] = '5432'
+
+#265
+if args['--dbtype'] == 'pgsql' and args['--dbport'] == None:
+
+#264
+print("""
+The 'alwaysfailcolumn' name '""" + alwaysfailcolumn +
+    "' not valid or not in cols2show.")
+print("""
+Valid settings for 'alwaysfailcolumn' are: """ + ' '.join(
+    valid_col_lst) + ' none row')
+print(
+    """
+With current 'cols2show' setting, valid settings for 'alwaysfailcolumn' are: """
+     + cols2show + ' none row')
+usage()
+
+#263
+if alwaysfailcolumn not in c2sl and alwaysfailcolumn not in ('row', 'none'):
+
+#1
+webgui = 'none'
+webguisvc = ''
+webguihost = ''
+webguiport = ''
+centerjobname = 'yes'
+centerclientname = 'yes'
+boldjobname = 'yes'
+boldstatus = 'yes'
+starbadjobids = 'no'
+sortorder = 'DESC'
+emailsummary = 'bottom'
+restore_stats = 'yes'
+copied_stats = 'yes'
+migrated_stats = 'yes'
+verified_stats = 'yes'
+emailjobsummaries = 'no'
+emailbadlogs = 'no'
+include_pnv_jobs = 'yes'
+addsubjecticon = 'yes'
+addsubjectrunningorcreated = 'yes'
+nojobsicon = '=?utf-8?Q?=F0=9F=9A=AB?='
+goodjobsicon = '=?utf-8?Q?=F0=9F=9F=A9?='
+warnjobsicon = '=?UTF-8?Q?=F0=9F=9F=A7?='
+badjobsicon = '=?utf-8?Q?=F0=9F=9F=A5?='
+alwaysfailjobsicon = '=?utf-8?Q?=E2=9B=94?='
+jobneedsopricon = '=?utf-8?Q?=F0=9F=96=AD?='
+cols2show = (
+    'jobid jobname client status joberrors type level jobfiles jobbytes starttime endtime runtime'
+    )
+alwaysfailcolumn = 'jobname'
+colorstatusbg = 'yes'
+jobtablerowevencolor = '#ffffff'
+jobtableroweventxtcolor = '#000000'
+jobtablerowoddcolor = '#f1f1f1'
+jobtablerowoddtxtcolor = '#000000'
+jobtableheadercolor = '#ad3939'
+jobtableheadertxtcolor = '#ffffff'
+summarytablerowevencolor = '#ffffff'
+summarytableroweventxtcolor = '#000000'
+summarytablerowoddcolor = '#f1f1f1'
+summarytablerowoddtxtcolor = '#000000'
+summarytableheadercolor = '#ad3939'
+summarytableheadertxtcolor = '#ffffff'
+runningjobcolor = '#4d79ff'
+createdjobcolor = '#add8e6'
+goodjobcolor = '#00f000'
+badjobcolor = '#cc3300'
+warnjobcolor = '#ffc800'
+errorjobcolor = '#cc3300'
+alwaysfailcolor = '#ebd32a'
+fontfamily = 'Verdana, Arial, Helvetica, sans-serif'
+fontsize = '16px'
+fontsizejobinfo = '12px'
+fontsizesumlog = '10px'
+jobsolderthantimestyle = (
+    'display: inline-block; font-size: 14px; font-weight: bold; padding: 6px; margin: 4px 0;'
+    )
+jobsneedingoprstyle = (
+    'display: inline-block; font-size: 14px; font-weight: bold; padding: 6px; margin: 4px 0;'
+    )
+alwaysfailstyle = (
+    'display: inline-block; font-size: 14px; font-weight: bold; padding: 6px; margin: 4px 0; background-color: %s;'
+     % alwaysfailcolor)
+jobtablestyle = 'width: 100%; border-collapse: collapse;'
+jobtableheaderstyle = (
+    'font-size: 12px; text-align: center; background-color: %s; color: %s;' %
+    (jobtableheadercolor, jobtableheadertxtcolor))
+jobtableheadercellstyle = 'padding: 6px'
+jobtablerowevenstyle = 'background-color: %s; color: %s;' % (
+    jobtablerowevencolor, jobtableroweventxtcolor)
+jobtablerowoddstyle = 'background-color: %s; color: %s;' % (jobtablerowoddcolor
+    , jobtablerowoddtxtcolor)
+jobtablecellstyle = 'text-align: center; padding: 5px;'
+jobtablealwaysfailrowstyle = 'background-color: %s;' % alwaysfailcolor
+jobtablealwaysfailcellstyle = ('text-align: center; background-color: %s;' %
+    alwaysfailcolor)
+summarytablestyle = 'width: 25%; margin-top: 20px; border-collapse: collapse;'
+summarytableheaderstyle = (
+    'font-size: 12px; text-align: center; background-color: %s; color: %s;' %
+    (summarytableheadercolor, summarytableheadertxtcolor))
+summarytableheadercellstyle = 'padding: 6px;'
+summarytablerowevenstyle = (
+    'font-weight: bold; background-color: %s; color: %s;' % (
+    summarytablerowevencolor, summarytableroweventxtcolor))
+summarytablerowoddstyle = (
+    'font-weight: bold; background-color: %s; color: %s;' % (
+    summarytablerowoddcolor, summarytablerowoddtxtcolor))
+summarytablecellstyle = 'padding: 5px;'
+import os
+import re
+import sys
+import smtplib
+from docopt import docopt
+from socket import gaierror
+progname = 'Bacula Backup Report'
+version = '1.29'
+reldate = 'August 12, 2021'
+prog_info = ('<p style="font-size: 8px;">' + progname + ' - v' + version +
+    ' - <a href="https://github.com/waa/"           + target="_blank">baculabackupreport.py</a>'
+     + '<br>By: Bill Arlofski waa@revpol.com (c) ' + reldate + '</body></html>'
+    )
+valid_webgui_lst = ['bweb', 'baculum']
+bad_job_set = {'A', 'D', 'E', 'f', 'I'}
+valid_db_lst = ['pgsql', 'mysql', 'maria']
+all_jobtype_lst = ['B', 'C', 'c', 'D', 'g', 'M', 'R', 'V']
+valid_email_summary_lst = ['top', 'bottom', 'both', 'none']
+valid_col_lst = ['jobid', 'jobname', 'client', 'status', 'joberrors',
+    'type', 'level', 'jobfiles', 'jobbytes', 'starttime', 'endtime', 'runtime']
+col_hdr_dict = {'jobid': '<th style="' + jobtableheadercellstyle +
+    '">Job ID</th>', 'jobname': '<th style="' + jobtableheadercellstyle +
+    '">Job Name</th>', 'client': '<th style="' + jobtableheadercellstyle +
+    '">Client</th>', 'status': '<th style="' + jobtableheadercellstyle +
+    '">Status</th>', 'joberrors': '<th style="' + jobtableheadercellstyle +
+    '">Errors</th>', 'type': '<th style="' + jobtableheadercellstyle +
+    '">Type</th>', 'level': '<th style="' + jobtableheadercellstyle +
+    '">Level</th>', 'jobfiles': '<th style="' + jobtableheadercellstyle +
+    '">Files</th>', 'jobbytes': '<th style="' + jobtableheadercellstyle +
+    '">Bytes</th>', 'starttime': '<th style="' + jobtableheadercellstyle +
+    '">Start Time</th>', 'endtime': '<th style="' + jobtableheadercellstyle +
+    '">End Time</th>', 'runtime': '<th style="' + jobtableheadercellstyle +
+    '">Run Time</th>'}
+def usage():...
+def cli_vs_env_vs_default_vars(var_name, env_name):...
+def print_opt_errors(opt):...
+def db_connect():...
+def pn_job_id(ctrl_jobid, p_or_n):...
+def v_job_id(vrfy_jobid):...
+def migrated_id(jobid):...
+def translate_job_type(jobtype, jobid, priorjobid):...
+def translate_job_status(jobstatus, joberrors):...
+def set_subject_icon():...
+def translate_job_level(joblevel, jobtype):...
+def html_format_cell(content, bgcolor='', star='', col='', jobtype=''):...
+def humanbytes(B):...
+def send_email(email, fromemail, subject, msg, smtpuser, smtppass,...
+doc_opt_str = """
+Usage:
+    baculabackupreport.py [-e <email>] [-f <fromemail>] [-s <server>] [-t <time>] [-d <days>] [-c <client>] [-j <jobname>] [-y <jobtype>]
+                          [--dbtype <dbtype>] [--dbport <dbport>] [--dbhost <dbhost>] [--dbname <dbname>]
+                          [--dbuser <dbuser>] [--dbpass <dbpass>]
+                          [--smtpserver <smtpserver>] [--smtpport <smtpport>] [-u <smtpuser>] [-p <smtppass>]
+    baculabackupreport.py -h | --help
+    baculabackupreport.py -v | --version
+
+Options:
+    -e, --email <email>               Email address to send report to
+    -f, --fromemail <fromemail>       Email address to be set in the From: field of the email
+    -s, --server <server>             Name of the Bacula Server [default: Bacula]
+    -t, --time <time>                 Time to report on in hours [default: 24]
+    -d, --days <days>                 Days to check for "always failing jobs" [default: 7]
+    -c, --client <client>             Client to report on using SQL 'LIKE client' [default: %] (all clients)
+    -j, --jobname <jobname>           Job name to report on using SQL 'LIKE jobname' [default: %] (all jobs)
+    -y, --jobtype <jobtype>           Type of job to report on. [default: DBRCcMgV] (all job types)
+    --dbtype (pgsql | mysql | maria)  Database type [default: pgsql]
+    --dbport <dbport>                 Database port (defaults pgsql 5432, mysql & maria 3306)
+    --dbhost <dbhost>                 Database host [default: localhost]
+    --dbname <dbname>                 Database name [default: bacula]
+    --dbuser <dbuser>                 Database user [default: bacula]
+    --dbpass <dbpass>                 Database password
+    --smtpserver <smtpserver>         SMTP server [default: localhost]
+    --smtpport <smtpport>             SMTP port [default: 25]
+    -u, --smtpuser <smtpuser>         SMTP user
+    -p, --smtppass <smtppass>         SMTP password
+
+    -h, --help                        Print this help message
+    -v, --version                     Print the script name and version
+
+Notes:
+* Edit variables at top of script to customize output
+* Only the email variable is required. It must be set on the command line or via an environment variable
+* Each '--varname' may instead be set using all caps environment variable names like: EMAIL="admin@example.com"
+* Variable assignment precedence is: command line > environment variable > default
+
+"""
+args = docopt(doc_opt_str, version='\n' + progname + ' - v' + version +
+    '\n' + reldate + '\n')
+c2sl = cols2show.split()
+if not all(item in valid_col_lst for item in c2sl):
+

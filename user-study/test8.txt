@@ -1,0 +1,45 @@
+output: line 65  d_key mod
+
+#37
+d[d_key] = item_value
+d_key = None
+
+#36
+item_value = int(item_value)
+
+#33
+item_value = item.text
+tag_type_str = item_tag[len('Setting'):]
+if tag_type_str.lower().strip() == 'number':
+
+#32
+if 'Setting' in item_tag:
+
+#28
+item_tag = item.tag.split('}')[-1]
+print(item_tag, end=': ', flush=True)
+if 'Name' in item_tag:
+
+#27
+for item in xml_root.findall(
+
+#3
+d = {}
+
+#2
+for extention_data in xml_root.findall('rsop:ComputerResults', STUPID_NAMESPACE
+
+#1
+import os
+from xml.etree import ElementTree as ET
+WORK_DIR = os.path.dirname(__file__)
+XML_PATH = os.path.join(WORK_DIR, 'output-local.xml')
+xml_root = ET.parse('output-pg.xml').getroot()
+STUPID_NAMESPACE = {'rsop': 'http://www.microsoft.com/GroupPolicy/Rsop',
+    'settings': 'http://www.microsoft.com/GroupPolicy/Settings', 'registry':
+    'http://www.microsoft.com/GroupPolicy/Settings/Registry', 'security':
+    'http://www.microsoft.com/GroupPolicy/Settings/Security', 'type':
+    'http://www.microsoft.com/GroupPolicy/Types'}
+print('Read time:', xml_root.find('rsop:ReadTime', STUPID_NAMESPACE).text)
+with open('xml-output.txt', 'w+') as file:
+

@@ -1,0 +1,66 @@
+input: fluiddyn@fluidimage/fluidimage/preproc/_toolbox_py.py 
+output: line 424 filters mod.adaptive_threshold
+
+#4
+__all__ = ['sliding_median', 'sliding_minima', 'sliding_percentile',
+    'temporal_median', 'temporal_minima', 'temporal_percentile',
+    'global_threshold', 'adaptive_threshold', 'rescale_intensity',
+    'equalize_hist_global', 'equalize_hist_local', 'equalize_hist_adapt',
+    'gamma_correction', 'sharpen', 'rescale_intensity_tanh']
+def imstats(img, hist_bins=256):...
+@iterate_multiple_imgs...
+@iterate_multiple_imgs...
+@iterate_multiple_imgs...
+def _calcul_windowshape(arr_shape, window_shape):...
+@multiple_imgs_as_ndarray...
+@multiple_imgs_as_ndarray...
+@multiple_imgs_as_ndarray...
+@iterate_multiple_imgs...
+@iterate_multiple_imgs...
+@iterate_multiple_imgs...
+@iterate_multiple_imgs...
+@iterate_multiple_imgs...
+@iterate_multiple_imgs...
+@iterate_multiple_imgs...
+@iterate_multiple_imgs...
+@iterate_multiple_imgs...
+
+#3
+print(
+    'Warning: ImportError, to use fluidimage.preproc, first install scikit-image >= 0.13.0'
+    )
+
+#1
+"""Preprocess toolbox (:mod:`fluidimage.preproc._toolbox_py`)
+==========================================================
+A toolbox for preprocessing images.
+Utilizes functions available from `scipy.ndimage` and `skimage` packages.
+cf. http://www.scipy-lectures.org/advanced/image_processing/
+
+Provides:
+
+   :members:
+
+"""
+import numpy as np
+import scipy.ndimage as ndi
+from .io import iterate_multiple_imgs, multiple_imgs_as_ndarray
+try:
+#63
+"""
+    Adaptive threshold transforms a grayscale image to a binary image.
+    Useful in identifying particles.
+
+    Parameters
+    ----------
+    img : array_like
+        Single image as numpy array or multiple images as array-like object
+    window_size : scalar
+        Sets the size of the pixel neighbourhood to calculate threshold.
+    offset : scalar
+        Constant to be subtracted from the mean.
+
+    """
+img_out = filters.threshold_local(img, window_size, offset=offset)
+return img_out
+

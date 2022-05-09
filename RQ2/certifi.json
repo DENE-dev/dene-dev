@@ -1,0 +1,1 @@
+{"repo_name": "certifi", "error_file": {"../lib-type/scalpel/pre-study/certifi/2020.6.20/tmp/certifi/__init__.py": [], "../lib-type/scalpel/pre-study/certifi/2020.6.20/tmp/certifi/core.py": [{"name": "__file__", "scope": "mod.where", "type": "unresolved", "path_id": [], "path_src": []}], "../lib-type/scalpel/pre-study/certifi/2020.6.20/tmp/certifi/__main__.py": []}}

@@ -1,0 +1,32 @@
+input: norbertosanchezdichi@TIL/MachineLearning/Regression/ModelSelection/backward_elimination_algorithm_with_adjusted_R_squared.py
+output: regressor_OLS mod  line 25 
+
+#14
+x_rollback = np.hstack((x, temp[:, ([0, j])]))
+x_rollback = np.delete(x_rollback, j, 1)
+print(regressor_OLS.summary())
+return x_rollback
+
+#12
+temp[:, (j)] = x[:, (j)]
+x = np.delete(x, j, 1)
+tmp_regressor = sm.OLS(y, x).fit()
+adjR_after = tmp_regressor.rsquared_adj.astype(float)
+if adjR_before >= adjR_after:
+
+#10
+if regressor_OLS.pvalues[j].astype(float) == maxVar:
+
+#8
+for j in range(0, numVars - i):
+
+#7
+if maxVar > SL:
+
+#5
+for i in range(0, numVars):
+
+#1
+import statsmodels.formula.api as sm
+def backwardElimination(x, SL):...
+
